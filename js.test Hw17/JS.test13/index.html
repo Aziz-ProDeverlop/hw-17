@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<style>
+    body {
+        background-color:bisque;
+        text-align: center;
+    }
+
+    h1{
+        font-size: 40px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+</style>
+<body>
+    <h1 id="h1">Welcome to JavaScript</h1>
+    <script src="./script.js"></script>
+    <script>
+        const h1Element = document.getElementById('h1');
+
+        const marquee = document.createElement('marquee');
+
+        marquee.textContent = h1Element.textContent;
+
+
+        document.body.appendChild(marquee);
+
+
+        function getLastElement(arr) {
+            if (arr.length === 0) {
+                return undefined; 
+            }
+            return arr[arr.length - 1]; 
+        }
+
+        let numbers = [13, 17, 19, 23, 29];
+        let lastElement = getLastElement(numbers);
+        console.log("Последний элемент массива:", lastElement);
+
+    </script>
+</body>
+</html>

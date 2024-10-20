@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<style>
+    body {
+        background-color:bisque;
+        text-align: center;
+    }
+
+    h1{
+        font-size: 40px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+</style>
+<body>
+    <h1 id="h1">Welcome to JavaScript</h1>
+    <script src="./script.js"></script>
+    <script>
+        const h1Element = document.getElementById('h1');
+
+        const marquee = document.createElement('marquee');
+
+        marquee.textContent = h1Element.textContent;
+        document.body.appendChild(marquee);
+
+
+        let numbers = [17, 19, 23, 29, 31, 37];
+        function isPrime(num) {
+            if (num <= 1) return false;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) return false; 
+            }
+            return true;
+        }
+        let primeIndexedElements = [];
+        for (let i = 0; i < numbers.length; i++) {
+            if (isPrime(i)) { 
+                primeIndexedElements.push(numbers[i]); 
+            }
+        }
+        console.log("Элементы с простыми индексами:", primeIndexedElements);
+
+    </script>
+</body>
+</html>
